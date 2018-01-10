@@ -46,3 +46,15 @@ if(iceCream === 'Y'){
 } else {
     alert('Come on ' + userName + '. Follow the directions. By the way, I like vanilla better.');
 }
+
+// question about seafood
+
+var seaFood = prompt('Last question... Do I like seafood? Please respond with Y or N').toUpperCase();
+
+if(seaFood === 'Y'){
+    alert('Nice try ' + userName + ', but I don\'t like any seafood.');
+} else if (seaFood === 'N'){
+    alert('Awesome ' + userName + '. You\'re correct!');
+} else {
+    alert('That answer is inappropriate!');
+}
