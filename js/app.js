@@ -6,6 +6,7 @@
 var userName = prompt('Hi, who are you?');
 
 alert('Nice to meet you ' + userName + '.');
+console.log('The user\'s name is ' + userName);
 
 // as a developer, I want to notify the user after each question, so they are aware whether they were correct or not in their answers
 
@@ -22,6 +23,7 @@ if(hats === '9') {
 } else {
     alert('Sorry ' + userName + '. I have 9 hats!')
 }
+console.log('Number of hats the user thinks I have: ' + hats);
 
 // question about city
 
@@ -34,6 +36,7 @@ if(cityFrom === 'Y') {
 } else {
     alert('Wrong because you didn\'t answer with Y or N. I\'m from Tacoma!');
 }
+console.log('User thinks I\'m from Seattle: ' + cityFrom);
 
 // question about ice cream preference
 
@@ -46,6 +49,7 @@ if(iceCream === 'Y'){
 } else {
     alert('Come on ' + userName + '. Follow the directions. By the way, I like vanilla better.');
 }
+console.log('User thinks I like strawberry ice cream better than vanilla: ' + iceCream);
 
 // question about seafood
 
@@ -58,3 +62,4 @@ if(seaFood === 'Y'){
 } else {
     alert('That answer is inappropriate!');
 }
+console.log('User thinks I like seafood: ' + seaFood);
