@@ -3,12 +3,16 @@
 // as a developer, I want to provide five questions to the user, so that they can guess the answers and get to know me
 // as a developer i want to receive and use the user's name, so that the program is personalized to their experience
 
+// question 1, who are you
+
 var userName = prompt('Hi, who are you?');
 
 alert('Nice to meet you ' + userName + '.');
 console.log('The user\'s name is ' + userName);
 
 // as a developer, I want to notify the user after each question, so they are aware whether they were correct or not in their answers
+
+// Question 2, how many hats
 
 var hats = prompt('How many hats do you think I have?');
 
@@ -25,7 +29,7 @@ if(hats === '9') {
 }
 console.log('Number of hats the user thinks I have: ' + hats);
 
-// question about city
+// Question 3, question about city
 
 var cityFrom = prompt('Do you think I\'m from Seattle? Please respond with Y or N').toUpperCase();
 
@@ -38,7 +42,7 @@ if(cityFrom === 'Y') {
 }
 console.log('User thinks I\'m from Seattle: ' + cityFrom);
 
-// question about ice cream preference
+// Question 4, question about ice cream preference
 
 var iceCream = prompt(userName + ', do I like strawberry ice cream better than vanilla? Please respond with Y or N').toUpperCase();
 
@@ -51,9 +55,9 @@ if(iceCream === 'Y'){
 }
 console.log('User thinks I like strawberry ice cream better than vanilla: ' + iceCream);
 
-// question about seafood
+// Question 5, question about seafood
 
-var seaFood = prompt('Last question... Do I like seafood? Please respond with Y or N').toUpperCase();
+var seaFood = prompt('Next question... Do I like seafood? Please respond with Y or N').toUpperCase();
 
 if(seaFood === 'Y'){
     alert('Nice try ' + userName + ', but I don\'t like any seafood.');
@@ -63,3 +67,27 @@ if(seaFood === 'Y'){
     alert('That answer is inappropriate!');
 }
 console.log('User thinks I like seafood: ' + seaFood);
+
+// As a developer, I want to add a sixth question to my guessing game that takes numeric input by prompting a user to guess a number (for instance, "What is my favorite number?" or "How many Pokémon did I catch yesterday?"), and indicates to the user whether the guess is 'too high' or 'too low', and gives the user exactly four opportunities to get the correct answer, so that my fancy programming skills are showcased.
+
+// Question 6, guess how many brothers I have
+alert('How many brothers do I have? You have 4 guesses.');
+
+var answer = 2;
+var guess = prompt('What is your guess?');
+
+for(var i=0; i<4; i++){
+  if(answer == guess){
+    alert('Correct');
+    break;
+  } else {
+    if(guess > answer){
+      alert('Too high');
+    } else {
+      if(guess < answer){
+        alert('Too Low');
+      }
+    }
+    guess = prompt('Try again');
+  }
+}
