@@ -91,3 +91,22 @@ for(var i=0; i<4; i++){
     guess = prompt('Try again');
   }
 }
+// question 7, guess my favorite sport
+
+var favoriteSports = ['basketball', 'football', 'baseball'];
+
+
+var sportGuess = prompt('Can you guess one of my favorite sports?');
+
+for(var i = 0; i < favoriteSports.length; i++) {
+ //   console.log('inside for loop', favoriteSports[i]);
+    if(sportGuess === favoriteSports[i]) {
+      alert('That is correct! I love ' + favoriteSports[i]);
+      break;
+    } else {
+      alert('Try again!');
+    }
+  
+  sportGuess = prompt('Can you guess one of my favorite sports?');
+}
+  
