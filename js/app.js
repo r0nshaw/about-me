@@ -5,7 +5,7 @@
 
 // question 1, who are you
 var correctAnswer = 0;
-var userName = prompt('Hi, who are you?');
+var userName = prompt('Hi, who are you?').toUpperCase();
 
 alert('Nice to meet you ' + userName + '.');
 console.log('The user\'s name is ' + userName);
@@ -96,22 +96,29 @@ for(var i=0; i<4; i++){
     guess = prompt('Try again');
   }
 }
+console.log('User last guessed I have this many brothers: ' + guess);
 // question 7, guess my favorite sport
 
 var favoriteSports = ['basketball', 'football', 'baseball'];
 
 
-var sportGuess = prompt('Can you guess one of my favorite sports?');
-
+var sportGuess = prompt('Can you guess one of my favorite sports?').toLowerCase();
+var gotItCorrect = false;
 for(var i = 0; i < favoriteSports.length; i++) {
     if(sportGuess === favoriteSports[i]) {
       alert('That is correct! I love ' + favoriteSports[i]);
       correctAnswer++;
+      gotItCorrect = true;
       break;
-    } else {
-      alert('Try again!');
     }
-    sportGuess = prompt('Can you guess one of my favorite sports?');
+    // sportGuess = prompt('Can you guess one of my favorite sports?');
 }
-
+if(gotItCorrect === false) {
+    alert('Sorry, that\'s wrong.');
+}
+console.log('User last guessed that this was one of my favorite sports: ' + sportGuess);
+// score tracker
 alert('Nice job ' + userName + '. You got ' + correctAnswer + ' correct out of 6 possible.');
+
+console.log('User got ' + correctAnswer + ' correct out of 6 possible');
+
