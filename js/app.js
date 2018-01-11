@@ -4,7 +4,7 @@
 // as a developer i want to receive and use the user's name, so that the program is personalized to their experience
 
 // question 1, who are you
-
+var correctAnswer = 0;
 var userName = prompt('Hi, who are you?');
 
 alert('Nice to meet you ' + userName + '.');
@@ -24,6 +24,7 @@ var hats = prompt('How many hats do you think I have?');
 
 if(hats === '9') {
     alert('Yessssss! I do have 9 hats ' + userName + '!');
+    correctAnswer++;
 } else {
     alert('Sorry ' + userName + '. I have 9 hats!')
 }
@@ -37,6 +38,7 @@ if(cityFrom === 'Y') {
     alert('No, ' + userName + ', I\'m actually not. I\'m from Tacoma.');
 } else if (cityFrom === 'N') {
     alert('You\'re right ' + userName + '. I\'m from Tacoma!');
+    correctAnswer++;
 } else {
     alert('Wrong because you didn\'t answer with Y or N. I\'m from Tacoma!');
 }
@@ -50,6 +52,7 @@ if(iceCream === 'Y'){
     alert('Sorry ' + userName + '. I like vanilla a little better.');
 } else if (iceCream === 'N'){
     alert('Great ' + userName + '. I do, in fact, like vanilla better.');
+    correctAnswer++;
 } else {
     alert('Come on ' + userName + '. Follow the directions. By the way, I like vanilla better.');
 }
@@ -63,6 +66,7 @@ if(seaFood === 'Y'){
     alert('Nice try ' + userName + ', but I don\'t like any seafood.');
 } else if (seaFood === 'N'){
     alert('Awesome ' + userName + '. You\'re correct!');
+    correctAnswer++;
 } else {
     alert('That answer is inappropriate!');
 }
@@ -79,6 +83,7 @@ var guess = prompt('What is your guess?');
 for(var i=0; i<4; i++){
   if(answer == guess){
     alert('Correct');
+    correctAnswer++;
     break;
   } else {
     if(guess > answer){
@@ -99,14 +104,14 @@ var favoriteSports = ['basketball', 'football', 'baseball'];
 var sportGuess = prompt('Can you guess one of my favorite sports?');
 
 for(var i = 0; i < favoriteSports.length; i++) {
- //   console.log('inside for loop', favoriteSports[i]);
     if(sportGuess === favoriteSports[i]) {
       alert('That is correct! I love ' + favoriteSports[i]);
+      correctAnswer++;
       break;
     } else {
       alert('Try again!');
     }
-  
-  sportGuess = prompt('Can you guess one of my favorite sports?');
+    sportGuess = prompt('Can you guess one of my favorite sports?');
 }
-  
+
+alert('Nice job ' + userName + '. You got ' + correctAnswer + ' correct out of 6 possible.');
